@@ -3,7 +3,7 @@ const express = require('express');
 const connectDB = require('./proyecto-api/src/config/database.js');
 
 const app = express();
-
+try{
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -45,3 +45,6 @@ process.on('unhandledRejection', (err) => {
     console.error('Error no manejado:', err);
     process.exit(1);
 });
+} catch (error) {
+    console.error('Error al iniciar la aplicación:', error);
+}
