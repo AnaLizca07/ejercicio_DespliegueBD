@@ -1,6 +1,6 @@
 require('dotenv').config();
 const express = require('express');
-const connectDB = require('./proyecto-api/src/config/database');
+const connectDB = require('./proyecto-api/src/config/database.js');
 
 const app = express();
 
