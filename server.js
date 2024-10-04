@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
 connectDB()
     .then(() => {
         // Configurar rutas solo después de conectar a la BD
-        const itemRoutes = require('./proyecto-api/src/routes/itemRoutes');
+        const itemRoutes = require('./proyecto-api/src/routes/itemRoutes.js');
         app.use('/api/items', itemRoutes);
 
         // Iniciar el servidor solo después de conectar a la BD
